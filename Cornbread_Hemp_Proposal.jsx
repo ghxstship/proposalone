@@ -400,10 +400,10 @@ export default function Proposal() {
       {/* NAV */}
       <nav className="nb" style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 100, background: "rgba(253,246,236,0.92)", backdropFilter: "blur(12px)", borderBottom: "1px solid rgba(232,224,212,0.6)", padding: "0 40px" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto", display: "flex", alignItems: "center", height: 48 }}>
-          <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: 1.5, marginRight: "auto", whiteSpace: "nowrap" }}>
-            <span style={{ fontFamily: "'Anton', sans-serif", color: "#2C1A0E" }}>G H X S T S H I P</span>{" "}
-            <span style={{ color: "rgba(44,26,14,0.35)", fontSize: 10 }}>x</span>{" "}
-            <span style={{ fontFamily: "var(--serif)", color: "#2C1A0E" }}>AGORA GRAPHICS &amp; VISUALS</span>
+          <div style={{ fontWeight: 700, letterSpacing: 1.5, marginRight: "auto", whiteSpace: "nowrap", display: "inline-flex", alignItems: "baseline", gap: 6 }}>
+            <span data-brand="anton-nav" style={{ fontFamily: "'Anton', sans-serif", color: "#2C1A0E", fontSize: 12, lineHeight: 1 }}>G H X S T S H I P</span>
+            <span style={{ color: "rgba(44,26,14,0.35)", fontSize: 10, lineHeight: 1 }}>x</span>
+            <span data-brand="serif-nav" style={{ fontFamily: "var(--serif)", color: "#2C1A0E", fontSize: 15.5, lineHeight: 1 }}>AGORA GRAPHICS &amp; VISUALS</span>
           </div>
           <div style={{ display: "flex", gap: 2 }}>
             {PHASES.map(p => (
@@ -426,7 +426,7 @@ export default function Proposal() {
         <div style={{ position: "absolute", top: 0, left: 0, width: 5, height: "100%", background: "linear-gradient(180deg, #3B7D44, #C49629, #D4782A, #3B7D44, #C49629, #D4782A, #3B7D44, #C49629)" }} />
         <div style={{ maxWidth: 1100, margin: "0 auto", width: "100%" }}>
           <div style={{ fontSize: 10, letterSpacing: 2, color: "#D4782A", textTransform: "uppercase", marginBottom: 8, animation: "slideIn 0.6s ease 0.25s both" }}>
-            Custom Fabrication & Experiential Production
+            Experiential Production Solutions & Technologies
           </div>
           <h1 className="ht" style={{ fontFamily: "var(--serif)", fontSize: 52, fontWeight: 700, color: "#2C1A0E", lineHeight: 1.08, marginBottom: 10, animation: "fadeUp 0.8s ease 0.3s both" }}>
             Custom Brand Activation
@@ -818,7 +818,11 @@ export default function Proposal() {
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <div className="g2" style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr 1fr", gap: 32 }}>
             <div>
-              <div style={{ fontSize: 15, fontWeight: 700, letterSpacing: 2, marginBottom: 4 }}><span style={{ fontFamily: "'Anton', sans-serif", color: "#FFFFFF" }}>G H X S T S H I P</span> <span style={{ color: "rgba(255,255,255,0.35)", fontSize: 12 }}>x</span> <span style={{ fontFamily: "var(--serif)", color: "#FFFFFF" }}>AGORA GRAPHICS & VISUALS</span></div>
+              <div style={{ fontWeight: 700, letterSpacing: 2, marginBottom: 4, display: "inline-flex", alignItems: "baseline", gap: 8 }}>
+                <span data-brand="anton-foot" style={{ fontFamily: "'Anton', sans-serif", color: "#FFFFFF", fontSize: 15, lineHeight: 1 }}>G H X S T S H I P</span>
+                <span style={{ color: "rgba(255,255,255,0.35)", fontSize: 12, lineHeight: 1 }}>x</span>
+                <span data-brand="serif-foot" style={{ fontFamily: "var(--serif)", color: "#FFFFFF", fontSize: 19.5, lineHeight: 1 }}>AGORA GRAPHICS & VISUALS</span>
+              </div>
               <div style={{ fontSize: 9, color: "rgba(255,255,255,0.35)", letterSpacing: 2, textTransform: "uppercase", marginBottom: 14 }}>Experiential Production Solutions & Technologies</div>
               <div style={{ fontSize: 10, color: "rgba(255,255,255,0.3)", letterSpacing: 1.5 }}>Miami | Orlando | New York | Chicago | Las Vegas | Los Angeles</div>
             </div>
