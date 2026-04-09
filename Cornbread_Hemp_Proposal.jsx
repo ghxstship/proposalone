@@ -486,7 +486,7 @@ export default function Proposal() {
           <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 12 }}>
             <thead>
               <tr style={{ background: "#2C1A0E" }}>
-                {["Phase", "", "Engagement Part", "Investment"].map((h, i) => (
+                {["Phase", "", "Package", "Investment"].map((h, i) => (
                   <th key={i} style={{ padding: "10px 14px", color: "#fff", fontWeight: 700, textAlign: i === 3 ? "right" : "left", fontSize: 10, letterSpacing: 0.5 }}>{h}</th>
                 ))}
               </tr>
@@ -518,7 +518,7 @@ export default function Proposal() {
           <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "20px 24px", borderLeft: "5px solid #D4782A" }}>
             <div>
               <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 4 }}>
-                <span style={{ fontFamily: "var(--serif)", fontSize: 22, fontWeight: 700, color: "#D4782A" }}>Part A | Return</span>
+                <span style={{ fontFamily: "var(--serif)", fontSize: 22, fontWeight: 700, color: "#D4782A" }}>Return</span>
                 <span style={{ fontSize: 9, fontWeight: 700, background: "#D4782A", color: "#fff", padding: "2px 8px", borderRadius: 3, letterSpacing: 1 }}>RETURN</span>
                 <span style={{ fontSize: 9, fontWeight: 700, background: "#2C1A0E", color: "#fff", padding: "2px 8px", borderRadius: 3, letterSpacing: 1 }}>RETURN | PHASES 05 + 08</span>
               </div>
@@ -565,7 +565,7 @@ export default function Proposal() {
           <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "20px 24px", borderLeft: "5px solid #3B7D44" }}>
             <div>
               <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 4 }}>
-                <span style={{ fontFamily: "var(--serif)", fontSize: 22, fontWeight: 700, color: "#3B7D44" }}>Part B | Restore</span>
+                <span style={{ fontFamily: "var(--serif)", fontSize: 22, fontWeight: 700, color: "#3B7D44" }}>Restore</span>
                 <span style={{ fontSize: 9, fontWeight: 700, background: "#3B7D44", color: "#fff", padding: "2px 8px", borderRadius: 3, letterSpacing: 1 }}>RESTORE</span>
                 <span style={{ fontSize: 9, fontWeight: 700, background: "#2C1A0E", color: "#fff", padding: "2px 8px", borderRadius: 3, letterSpacing: 1 }}>RESTORE | PHASE 08</span>
               </div>
@@ -632,7 +632,7 @@ export default function Proposal() {
           <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "20px 24px", borderLeft: "5px solid #C49629" }}>
             <div>
               <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 4 }}>
-                <span style={{ fontFamily: "var(--serif)", fontSize: 22, fontWeight: 700, color: "#C49629" }}>Part C | Release</span>
+                <span style={{ fontFamily: "var(--serif)", fontSize: 22, fontWeight: 700, color: "#C49629" }}>Release</span>
                 <span style={{ fontSize: 9, fontWeight: 700, background: "#C49629", color: "#fff", padding: "2px 8px", borderRadius: 3, letterSpacing: 1 }}>RELEASE</span>
                 <span style={{ fontSize: 9, fontWeight: 700, background: "#2C1A0E", color: "#fff", padding: "2px 8px", borderRadius: 3, letterSpacing: 1 }}>RELEASE | PHASES 05 + 06 + 07</span>
               </div>
@@ -662,7 +662,7 @@ export default function Proposal() {
               </div>
             ))}
             <div style={{ marginTop: 12, padding: "10px 14px", background: "#FDF6EC", borderRadius: 4, fontSize: 11, color: "#6B5D4F", lineHeight: 1.6 }}>
-              <span style={{ fontWeight: 700, color: "#C49629" }}>Subscription Rate:</span> $10,000 per deployment for active Part B subscribers. Includes transport, crew labor, logistics coordination, on-site supervision, and activation delivery.
+              <span style={{ fontWeight: 700, color: "#C49629" }}>Subscription Rate:</span> $10,000 per deployment for active Restore subscribers. Includes transport, crew labor, logistics coordination, on-site supervision, and activation delivery.
               <br /><br />
               <span style={{ fontWeight: 700, color: "#9C8E7E" }}>A La Carte Rate:</span> Starting at $15,000 per deployment without an active Restore subscription. A la carte pricing determined by asset condition at time of mobilization, distance from storage, venue complexity, and scheduling lead time.
               <br /><br />
@@ -689,14 +689,13 @@ export default function Proposal() {
           <div style={{ fontFamily: "var(--serif)", fontSize: 18, fontWeight: 700, color: "#fff", marginBottom: 20 }}>Engagement Overview</div>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 16 }} className="g2">
             {[
-              { part: "A", label: "Return", price: "$7,500", freq: "One-time", date: "April 13, 2026", phases: "05 + 08", c: "#D4782A" },
-              { part: "B", label: "Restore", price: "$6,000 / $5,000", freq: "Monthly / Annual ($12,000 saved)", date: "Effective May 1", phases: "08", c: "#3B7D44" },
-              { part: "C", label: "Release", price: "$10,000 / $15,000", freq: "Per event (subscriber / a la carte)", date: "As scheduled", phases: "05 + 06 + 07", c: "#C49629" },
+              { label: "Return", price: "$7,500", freq: "One-time", date: "April 13, 2026", phases: "05 + 08", c: "#D4782A" },
+              { label: "Restore", price: "$6,000 / $5,000", freq: "Monthly / Annual ($12,000 saved)", date: "Effective May 1", phases: "08", c: "#3B7D44" },
+              { label: "Release", price: "$10,000 / $15,000", freq: "Per event (subscriber / a la carte)", date: "As scheduled", phases: "05 + 06 + 07", c: "#C49629" },
             ].map((t, i) => (
               <div key={i} style={{ borderTop: `3px solid ${t.c}`, paddingTop: 14 }}>
-                <div style={{ fontSize: 10, color: t.c, fontWeight: 700, letterSpacing: 2, marginBottom: 6 }}>PART {t.part}</div>
+                <div style={{ fontSize: 10, color: t.c, fontWeight: 700, letterSpacing: 2, marginBottom: 6 }}>{t.label}</div>
                 <div style={{ fontFamily: "var(--serif)", fontSize: 24, fontWeight: 700, color: "#fff", marginBottom: 4 }}>{t.price}</div>
-                <div style={{ fontSize: 12, color: "rgba(255,255,255,0.6)", marginBottom: 2 }}>{t.label}</div>
                 <div style={{ fontSize: 10, color: "rgba(255,255,255,0.35)", marginBottom: 4 }}>{t.freq} — {t.date}</div>
                 <div style={{ fontSize: 9, color: "rgba(255,255,255,0.25)", letterSpacing: 1 }}>PHASES {t.phases}</div>
               </div>
@@ -721,7 +720,7 @@ export default function Proposal() {
         )}
 
         <div style={{ fontSize: 12, color: "#9C8E7E", fontStyle: "italic", marginBottom: 40 }}>
-          Pre-tax. Transport quotes for Part A pending final routing. Part B subscription billed monthly on the 1st. Part C pricing reflects subscriber vs. a la carte rate — standard working hours and ground-level venue access assumed. Phases 01-04 (Discovery through Fabrication) available as upgrade options and scoped separately. Add-ons selected in the phase builder above are quoted separately.
+          Pre-tax. Transport quotes for Return pending final routing. Restore subscription billed monthly on the 1st. Release pricing reflects subscriber vs. a la carte rate — standard working hours and ground-level venue access assumed. Phases 01-04 (Discovery through Fabrication) available as upgrade options and scoped separately. Add-ons selected in the phase builder above are quoted separately.
         </div>
 
         {/* Payment Terms */}
@@ -755,11 +754,11 @@ export default function Proposal() {
 
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 24 }} className="g2">
           {[
-            { title: "Scope & Change Orders", items: ["Scope of work defined per Part (A, B, C) as outlined in this proposal", "Changes to scope require written change order with cost/timeline impact", "Out-of-scope requests quoted within 2 business days", "Client responsible for providing venue access, power, and brand artwork per schedule"] },
+            { title: "Scope & Change Orders", items: ["Scope of work defined per engagement package (Return, Restore, Release) as outlined in this proposal", "Changes to scope require written change order with cost/timeline impact", "Out-of-scope requests quoted within 2 business days", "Client responsible for providing venue access, power, and brand artwork per schedule"] },
             { title: "Payment & Cancellation", items: ["Return: due on execution, non-refundable once strike crew is deployed", "Restore: monthly on the 1st, 30-day written notice to cancel after minimum term. Month-to-month continuation at $6,500 per month after initial term", "Release: deployment fee due 14 days prior, cancellation within 7 days forfeits 50%", "Late payments subject to 1.5% monthly service charge"] },
             { title: "Insurance & Liability", items: ["G H X S T S H I P maintains commercial general liability and workers compensation", "Standard cargo coverage of $100,000 per occurrence included on all asset shipments", "Certificate of Insurance provided upon request for all venue submissions", "Client responsible for asset-specific property insurance (G H X S T S H I P can broker)", "Client responsible for event-specific liability insurance as required by each activation venue", "Damage during normal activation wear assessed per post-event condition report"] },
             { title: "Asset Ownership & IP", items: ["All fabricated assets are property of Cornbread Hemp upon full payment", "Design IP and engineering drawings licensed for Cornbread Hemp use", "G H X S T S H I P retains right to portfolio photography for marketing purposes", "Storage does not constitute ownership transfer — assets remain client property"] },
-            { title: "Warranty & Quality", items: ["14-day warranty on all installation work from date of acceptance walk-through", "Part B maintenance subscription provides ongoing baseline quality assurance", "Fabrication defects covered under separate warranty per fabrication SOW", "Force majeure provisions apply per industry standard terms"] },
+            { title: "Warranty & Quality", items: ["14-day warranty on all installation work from date of acceptance walk-through", "Restore maintenance subscription provides ongoing baseline quality assurance", "Fabrication defects covered under separate warranty per fabrication SOW", "Force majeure provisions apply per industry standard terms"] },
             { title: "Confidentiality & Data", items: ["All proposal contents, pricing, and strategy are confidential", "Guest data captured during activations handled per applicable privacy regulations", "ATLVS platform access governed by separate data processing agreement", "Neither party discloses terms without written consent of the other"] },
           ].map((section, i) => (
             <div key={i} style={{ background: "#fff", borderRadius: 6, padding: "16px 18px", border: "1px solid #E8E0D4" }}>
