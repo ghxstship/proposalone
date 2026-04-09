@@ -400,7 +400,11 @@ export default function Proposal() {
       {/* NAV */}
       <nav className="nb" style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 100, background: "rgba(253,246,236,0.92)", backdropFilter: "blur(12px)", borderBottom: "1px solid rgba(232,224,212,0.6)", padding: "0 40px" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto", display: "flex", alignItems: "center", height: 48 }}>
-          <div style={{ fontFamily: "var(--serif)", fontSize: 13, fontWeight: 700, color: "#E91E63", marginRight: "auto" }}>G H X S T S H I P x AGORA</div>
+          <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: 1.5, marginRight: "auto", whiteSpace: "nowrap" }}>
+            <span style={{ fontFamily: "'Anton', sans-serif", color: "#2C1A0E" }}>G H X S T S H I P</span>{" "}
+            <span style={{ color: "rgba(44,26,14,0.35)", fontSize: 10 }}>x</span>{" "}
+            <span style={{ fontFamily: "var(--serif)", color: "#2C1A0E" }}>AGORA GRAPHICS &amp; VISUALS</span>
+          </div>
           <div style={{ display: "flex", gap: 2 }}>
             {PHASES.map(p => (
               <a key={p.id} href={`#${p.id}`} style={{ fontSize: 10, fontWeight: 600, color: "#4A3728", padding: "6px 10px", borderRadius: 4, transition: "all 0.2s" }}
@@ -418,9 +422,9 @@ export default function Proposal() {
       </nav>
 
       {/* HERO */}
-      <section style={{ minHeight: "100vh", display: "flex", flexDirection: "column", justifyContent: "center", padding: "80px 40px", position: "relative" }}>
+      <section style={{ minHeight: "100vh", display: "flex", flexDirection: "column", justifyContent: "center", padding: "clamp(64px, 10vh, 96px) clamp(24px, 5vw, 40px)", position: "relative" }}>
         <div style={{ position: "absolute", top: 0, left: 0, width: 5, height: "100%", background: "linear-gradient(180deg, #3B7D44, #C49629, #D4782A, #3B7D44, #C49629, #D4782A, #3B7D44, #C49629)" }} />
-        <div style={{ maxWidth: 800, marginLeft: 40 }}>
+        <div style={{ maxWidth: 1100, margin: "0 auto", width: "100%" }}>
           <div style={{ fontSize: 10, letterSpacing: 2, color: "#D4782A", textTransform: "uppercase", marginBottom: 8, animation: "slideIn 0.6s ease 0.25s both" }}>
             Custom Fabrication & Experiential Production
           </div>
@@ -448,7 +452,7 @@ export default function Proposal() {
       </section>
 
       {/* 8 PHASES */}
-      <div style={{ maxWidth: 1000, margin: "0 auto", padding: "60px 40px 40px" }}>
+      <div style={{ maxWidth: 1100, margin: "0 auto", padding: "60px clamp(24px, 5vw, 40px) 40px" }}>
         <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 24 }}>
           <div style={{ width: 32, height: 2, background: "#D4782A" }} />
           <span style={{ fontSize: 10, letterSpacing: 3, color: "#D4782A", textTransform: "uppercase", fontWeight: 700 }}>The Experience Build</span>
@@ -464,7 +468,7 @@ export default function Proposal() {
       </div>
 
       {/* INVESTMENT SUMMARY — 3-PART ENGAGEMENT */}
-      <section id="summary" data-a style={{ padding: "60px 40px 40px", maxWidth: 1000, margin: "0 auto", ...a("summary") }}>
+      <section id="summary" data-a style={{ padding: "60px clamp(24px, 5vw, 40px) 40px", maxWidth: 1100, margin: "0 auto", ...a("summary") }}>
         <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 24 }}>
           <div style={{ width: 32, height: 2, background: "#C49629" }} />
           <span style={{ fontSize: 10, letterSpacing: 3, color: "#C49629", textTransform: "uppercase", fontWeight: 700 }}>Your Experience Build</span>
@@ -810,7 +814,7 @@ export default function Proposal() {
       </section>
 
       {/* FOOTER */}
-      <footer style={{ background: "#2C1A0E", padding: "48px 40px 32px" }}>
+      <footer style={{ background: "#2C1A0E", padding: "48px clamp(24px, 5vw, 40px) 32px" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <div className="g2" style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr 1fr", gap: 32 }}>
             <div>
